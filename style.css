@@ -1,0 +1,114 @@
+body {
+  background-color: #111;
+  color: #0f0;
+  font-family: monospace;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#terminal {
+  width: 90%;
+  max-width: 800px;
+  background-color: #000;
+  padding: 20px;
+  border: 2px solid #0f0;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #0f0;
+}
+
+#output {
+  height: 400px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+.input-line {
+  display: flex;
+  align-items: center;
+}
+
+.input-line span {
+  margin-right: 5px;
+}
+
+.entrada-comando {
+  color: #00ff00;
+  font-weight: bold;
+  font-family: monospace;
+  margin-top: 8px;
+}
+
+.resposta-terminal {
+  color: #ffffff;
+  font-family: monospace;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+}
+
+
+#commandInput {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #0f0;
+  font-size: 16px;
+  width: 100%;
+}
+
+#alternarModo {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  background-color: #0f0;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+#visual {
+  padding: 20px;
+  background-color: #f0f0f0;
+  color: #000;
+  font-family: sans-serif;
+}
+
+#visual h2 {
+  color: #0a0;
+}
+
+#visual section {
+  margin-bottom: 30px;
+  padding: 10px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #ccc;
+}
+
+#alternarModo {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  padding: 8px 12px;
+  background-color: #111;
+  color: #0f0;
+  border: 1.5px solid #0f0;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+#alternarModo:hover {
+  background-color: #0f0;
+  color: #111;
+}

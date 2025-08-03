@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Conexão Solidária</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Modo Visual (padrão ao abrir) -->
+  <section id="visual">
+    <header>
+      <h1>Conexão Solidária</h1>
+      <p>Juntos por um futuro mais justo! Aqui você pode doar, receber ajuda, e conhecer seus direitos sociais.</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>🌱 Por que ajudar importa?</h2>
+        <p>Milhares de famílias vivem em situação de vulnerabilidade. Com pequenas ações, você pode transformar vidas.</p>
+      </section>
+  </section>
+
+  <!-- Modo Terminal -->
+  <section id="terminal" style="display: none;">
+    <div id="terminalOutput" style="background:#000; color:#0f0; padding:1em; height:300px; overflow:auto; font-family:monospace;">
+      🖥️ Bem-vindo ao terminal solidário!
+      Digite "ajuda" para ver os comandos.
+    </div>
+    <input id="terminalInput" type="text" placeholder="Digite um comando..." style="width:100%; padding:0.5em; font-family:monospace;" />
+  </section>
+
+  <!-- Botão de alternância -->
+  <button id="alternarModo">🖥️ Modo Terminal</button>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
