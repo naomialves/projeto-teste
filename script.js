@@ -143,17 +143,26 @@ function responderHumor(texto) {
 function responderConversa(texto) {
   let resposta = "";
 
-  if (texto.match(/(triste|chateado|sozinho|decepcionado|culpado)/i)) {
-    resposta = `💬 Entendo... quer me contar o que está te deixando assim? Eu estou aqui.`;
-  } else if (texto.match(/(feliz|bom|ótimo|grato|esperançoso)/i)) {
-    resposta = `🌟 Que bom! Tem algo que te deixou especialmente feliz hoje?`;
+  if (texto.match(/(triste|chateado|sozinho|decepcionado|culpado|criticável|horroroso|feio|desanimado|pessimo|pessimista|horroroso|burro|infeliz)/i)) {
+    resposta = `💔 Sinto muito que você esteja se sentindo assim. Que tal me contar o que aconteceu? Às vezes, falar sobre isso pode ajudar a aliviar o peso.`;
+    resposta ='😭 Às vezes a tristeza nos pega de surpresa. Posso te ouvir se quiser desabafar um pouco.';
+  } else if (texto.match(/(feliz|bom|ótimo|grato|esperançoso|alegre|otimista|orgulhoso|animado|prospero|risonho|brilhante|festivo)/i)) {
+    resposta = `🌞 Fico feliz em saber que você está bem! Agradecer pelos pequenos momentos é importante. O que te deixou tão contente?`;
+    resposta = '🌞 Fico feliz em saber que você está bem! Agradecer pelos pequenos momentos é importante. O que te deixou tão contente?';
+    resposta = '💛 Isso é maravilhoso! O que foi que te fez sentir tão grato hoje?';
   } else if (texto.match(/(ansioso|preocupado|tenso)/i)) {
     resposta = `😥 A ansiedade pode ser difícil. Vamos tentar uma respiração juntos? Inspire... expire...`;
-  } else if (texto.match(/(não sei o que fazer|perdido|confuso)/i)) {
+  } else if (texto.match(/(não sei o que fazer|perdido|confuso|sem amigos|)/i)) {
     resposta = `🧭 Às vezes, sentir-se perdido é parte do caminho. Quer conversar sobre seus próximos passos?`;
+  }
+  else if (texto.match(/(raiva|furioso|irritado|bravo|estressado|irritante|estressante|frustrado)/i)) {
+   resposta ='🔥 Entendo que a raiva pode ser difícil de lidar. Quer conversar sobre o que te irritou?';
+   resposta = ' 💢 Parece que algo te deixou realmente frustrado. Eu estou aqui para ouvir, se quiser falar sobre isso.';
+
   } else {
     resposta = `🤖 Estou te ouvindo. Fale mais se quiser.`;
   }
+
 
   terminalOutput.innerHTML += `<div class="resposta-terminal">${resposta}</div>`;
   terminalOutput.scrollTop = terminalOutput.scrollHeight;
